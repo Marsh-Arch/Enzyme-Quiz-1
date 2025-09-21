@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzymes Practice Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="quiz-header">
+            <div class="header-content">
+                <h1>Enzymes Practice Test</h1>
+                <p class="subtitle">Based on Biochemistry Course Material</p>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="currentQuestion">1</span> of <span id="totalQuestions">35</span>
+            </div>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div class="screen active" id="welcomeScreen">
+            <div class="welcome-content">
+                <div class="welcome-icon">📚</div>
+                <h2>Welcome to the Enzymes Practice Test</h2>
+                <div class="instructions">
+                    <p><strong>Instructions:</strong></p>
+                    <ul>
+                        <li>Answer all questions to complete the test</li>
+                        <li>There are 30 multiple choice and 5 short answer questions</li>
+                        <li>Use the Next and Previous buttons to navigate</li>
+                        <li>Click Submit when finished to see your results</li>
+                        <li>You can review your answers before submitting</li>
+                    </ul>
+                </div>
+                <button class="btn btn--primary btn--lg" id="startQuizBtn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="screen" id="quizScreen">
+            <div class="question-container">
+                <div class="question-header">
+                    <div class="question-number" id="questionNumber">Question 1</div>
+                    <div class="question-category" id="questionCategory">Basic Enzyme Concepts</div>
+                </div>
+                
+                <div class="question-content" id="questionContent">
+                    <!-- Dynamic question content will be inserted here -->
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="btn btn--outline" id="prevBtn" disabled>Previous</button>
+                    <button class="btn btn--primary" id="nextBtn">Next</button>
+                    <button class="btn btn--primary" id="submitBtn" style="display: none;">Submit Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen" id="resultsScreen">
+            <div class="results-content">
+                <div class="results-header">
+                    <div class="results-icon">🎉</div>
+                    <h2>Quiz Complete!</h2>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span id="scorePercentage">0%</span>
+                        </div>
+                        <div class="score-details">
+                            <p>Your Score: <strong><span id="scoreText">0 / 35</span></strong></p>
+                            <p class="score-message" id="scoreMessage">Great job!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-breakdown">
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Multiple Choice:</span>
+                        <span class="breakdown-value" id="mcScore">0 / 30</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Short Answer:</span>
+                        <span class="breakdown-value" id="saScore">0 / 5</span>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn--outline" id="reviewBtn">Review Answers</button>
+                    <button class="btn btn--primary" id="retakeBtn">Retake Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Screen -->
+        <div class="screen" id="reviewScreen">
+            <div class="review-content">
+                <div class="review-header">
+                    <h2>Review Your Answers</h2>
+                    <button class="btn btn--outline" id="backToResultsBtn">Back to Results</button>
+                </div>
+                
+                <div class="review-questions" id="reviewQuestions">
+                    <!-- Review content will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
